@@ -36,7 +36,7 @@ scrape_configs:
 
   - job_name: 'mysparkapp'
     scrape_interval: 5s
-    target_groups:
+    static_configs:
       - targets: ['localhost:8088']
 
 
