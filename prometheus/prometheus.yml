@@ -35,9 +35,9 @@ scrape_configs:
       - targets: ['pushgateway:9091']
 
   - job_name: 'erens_spark_app'
-    scrape_interval: "5s"
-    target_groups:
-      - targets: ['localhost:8088']
+      scrape_interval: 5s
+      static_configs:
+        - targets: ['localhost:8088']
 
 alerting:
   alertmanagers:
